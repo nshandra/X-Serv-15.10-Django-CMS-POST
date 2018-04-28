@@ -1,0 +1,12 @@
+<!-- templates/ann_main.html -->
+{% extends 'base.html' %}
+
+{% block title %}Templates Home{% endblock %}
+{% block content %}
+<p><a href=/>cms users put</a><br>
+<a href=/edit/>cms post</a></p>
+Available pages:<br>
+{% for page in Pages_list %}
+	<li><a href="/annotated/{{ page.name }}">{{ page.name }}</a></li>
+{% endfor %}
+{% endblock %}

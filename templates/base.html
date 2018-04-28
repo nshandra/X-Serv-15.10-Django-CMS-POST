@@ -1,0 +1,19 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}Title{% endblock %}</title>
+</head>
+<body>
+	<main>
+		{% if user.is_authenticated %}
+			<p>Hi, {{ user.username }} <a href=/logout>logout</a></p>
+		{% else %}
+			<p>Not logged in: <a href=/login>login</a></p>
+		{% endif %}
+		{% block content %}
+		{% endblock %}
+	</main>
+</body>
+</html>

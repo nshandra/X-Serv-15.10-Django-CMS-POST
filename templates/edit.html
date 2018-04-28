@@ -1,0 +1,14 @@
+<!-- templates/edit.html -->
+{% extends 'base.html' %}
+
+{% block title %}{{ content.name }} editing{% endblock %}
+{% block content %}
+<p>Editing: {{ content.name }}<p>
+<form method="post">
+<textarea name="page" rows="15" cols="80">
+{{ content.page }}
+</textarea><br>
+<input type="submit" value="Edit page">
+</form>
+<p><a href=/edit><b>BACK</b></a></p>
+{% endblock %}
